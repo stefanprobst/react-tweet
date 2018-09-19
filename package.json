@@ -1,11 +1,14 @@
 {
   "name": "react-tweet",
   "version": "1.0.0",
-  "main": "index.js",
-  "module": "src/index.js",
+  "main": "lib/cjs/index.js",
+  "module": "lib/es/index.js",
   "repository": "https://github.com/stefanprobst/react-tweet.git",
   "author": "Stefan Probst <stefanprobst@kolabnow.com>",
   "license": "MIT",
+  "files": [
+    "lib"
+  ],
   "peerDependencies": {
     "react": ">=16"
   },
@@ -17,6 +20,8 @@
     "@babel/preset-react": "^7.0.0"
   },
   "scripts": {
-    "build": "babel src -d ."
+    "build:es": "babel src -d lib/es/",
+    "build:cjs": "BABEL_ENV=commonjs babel src -d lib/cjs/",
+    "build": "yarn build:es && yarn build:cjs"
   }
 }
