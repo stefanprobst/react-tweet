@@ -1,9 +1,9 @@
 {
-  "name": "react-tweet",
+  "name": "react-tweet-tweet",
   "version": "1.0.0",
   "main": "lib/cjs/index.js",
   "module": "lib/es/index.js",
-  "repository": "https://github.com/stefanprobst/react-tweet.git",
+  "repository": "https://github.com/stefanprobst/react-tweet-tweet.git",
   "author": "Stefan Probst <stefanprobst@kolabnow.com>",
   "license": "MIT",
   "files": [
