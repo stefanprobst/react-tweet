@@ -1,0 +1,22 @@
+{
+  "name": "react-tweet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "src/index.js",
+  "repository": "https://github.com/stefanprobst/react-tweet.git",
+  "author": "Stefan Probst <stefanprobst@kolabnow.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "scripts": {
+    "build": "babel src -d ."
+  }
+}
