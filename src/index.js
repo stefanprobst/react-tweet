@@ -20,12 +20,19 @@ window.twttr = (function(d, s, id) {
 })(document, 'script', 'twitter-wjs');
 
 class Tweet extends React.Component {
+  static defaultProps = {
+    onLoad: () => {},
+    onError: () => {}
+  };
+
   ref = React.createRef();
   tweetPromise = null;
 
   componentDidMount() {
     window.twttr.ready(() => {
-      this.tweetPromise = this.loadTweet(this.props.id);
+      this.tweetPromise = this.loadTweet(this.props.id)
+        .then(this.props.onLoad)
+        .catch(this.props.onError);
     });
   }
 
