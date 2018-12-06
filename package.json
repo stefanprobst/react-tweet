@@ -20,13 +20,17 @@
     "@babel/cli": "^7.1.0",
     "@babel/core": "^7.1.0",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0"
   },
   "scripts": {
-    "build:es": "babel src -d lib/es/",
-    "build:cjs": "BABEL_ENV=commonjs babel src -d lib/cjs/",
+    "build:es": "BABEL_ENV=es babel src -d lib/es/",
+    "build:cjs": "babel src -d lib/cjs/",
     "build": "yarn build:es && yarn build:cjs",
     "prepublish": "yarn build"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.2.0"
   }
 }
